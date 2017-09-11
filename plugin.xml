@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-toforeground" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+  <name>ToForeground</name>
+  <js-module name="ToForeground" src="www/ToForeground.js">
+    <clobbers target="toForeground" />
+  </js-module>
+
+
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="ToForeground">
+        <param name="android-package" value="com.cordova.plugins.toforeground.ToForeground"/>
+      </feature>
+    </config-file>
+
+    <source-file src="src/android/ToForeground.java" target-dir="src/com/cordova/plugins/toforeground"/>
+  </platform>
+</plugin>
